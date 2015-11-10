@@ -1,0 +1,299 @@
+@media only screen and (max-width: 400px) {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  };
+
+  .column:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.pane-title, .pane-content {
+  padding: 0 !important;
+}
+
+
+// Section: Main Menu
+#main-menu-links {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: white;
+  li {
+    float: none;
+    display: inline-block;
+    a {
+      margin: 10px;
+      font-family: tahoma, verdana, arial, sans-serif;
+      font-weight: bolder;
+      border-radius: 3px;
+      height: 35px;
+      font-size: 12px;
+      text-transform: uppercase;
+      }
+    }
+  }
+
+
+//Section: Home Page
+
+#messages {
+  padding-top: 5px !important;
+}
+
+.pane-content .intro {
+  margin-top: 20px;
+}
+
+
+.slogan {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5em;
+  padding-bottom: 1.5em;
+  a {
+    font-size: 35px;
+    text-decoration: none;
+  }
+}
+
+.social ul {
+  padding: 5px;
+  margin: 12px 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    list-style: none;
+    .hover-animate {
+      cursor: pointer;
+    }
+  }
+}
+
+.ukie-icons {
+  color: #ffffff;
+  border-color: #E68A8A;
+  background-color: #FF9999;
+}
+
+.ukie-icons {
+  display: inline-block;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin: 15px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+}
+
+  // Section: About Me
+
+
+.pane-content {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  img {
+    border-radius: 2px;
+    margin-top: 15px;
+  }
+}
+
+.photo {
+  text-align: center;
+}
+
+.pane-11 h2 {
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.about {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(136, 136, 136);
+  font-size: 14px;
+  line-height: 2em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding-top: 25px;
+}
+
+blockquote {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  clear: both;
+  font-size: 16px;
+  color: darkgrey;
+  font-style: normal;
+}
+
+// Section: Background
+
+.home-section {
+  display: block;
+  position: relative;
+  z-index: 120;
+}
+.pane-content .title {
+  margin: 20px;
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+}
+
+.content-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.job {
+  border: 1px solid #FFCC00;
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.education {
+  border: 1px solid #FFCC00;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.course {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 5px 0;
+  font-size: 0.9em;
+  color: #606777;
+}
+
+.date {
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+
+.position {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 5px 0;
+  font-size: 0.9em;
+  color: #606777;
+}
+
+.location {
+  font-size: 9px;
+  float: right;
+  font-weight: bolder;
+}
+
+.yellow {
+  color: #E6B800;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.date {
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.progress {
+  overflow: hidden;
+  height: 18px;
+  margin-bottom: 26px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.progress-bar {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  transition: width .6s ease;
+}
+
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+
+  // Section: Contact Me
+
+.center {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.panels-flexible-5 {
+  margin-top: 20px;
+}
+
+#contact-site-form--2 {
+  .make-lg-column-offset(3);
+  .make-lg-column(6);
+  .make-lg-column-offset(3);
+  input {
+    width: 100%;
+    border-radius: 3px;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+  }
+}
+
+.contact-form {
+  padding: 45px;
+  margin: 25px;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+
+.input.form-text {
+  margin-bottom: 15px;
+}
+
+.grippie {
+  display: none;
+}
+
+.form-actions .form-wrapper input.form-submit, a.button {
+  width: 100%;
+  border-radius: 5px;
+}
+
+// Section: Footer
+
+#footer-wrapper {
+  display: none;
+}
+
+

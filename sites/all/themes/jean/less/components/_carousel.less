@@ -1,0 +1,297 @@
+/*****************************************************************************************
+*
+*	name: carousel.less
+*   path: components/_carousel.less
+*	version: 1.0.0
+*	description: carousel styling
+*	author: Cristian Voinea
+*	e-mail: cvoinea@tremend.ro
+*	url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+// Block structure
+.l-region--lead-carousel {
+    height: 100%;
+    .block--block {
+        height: 100%;
+        .block__content {
+            height: 100%;
+        }
+    }
+}
+
+
+// hero banner
+.carousel-container {
+    height: 100%;
+    .carousel {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            z-index: 10;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-bottom-style: inset;
+            border-width: 0 0 280px (@screen-lg * 3.5);
+            border-color: transparent transparent @brand-light transparent;
+        }
+        .carousel-inner {
+            height: 100%;
+            background-color: @gray-dark;
+        }
+
+        // indicators
+        .carousel-indicators {
+            bottom: 0px;
+            z-index: 1000;
+            @media (max-width: @screen-md-min) {
+                display: none;
+            }
+            li {
+                border-color: fade(@gray-base, 35%);
+                &.active {
+                    background-color: fade(@gray-base, 35%);
+                }
+            }
+        }
+
+        // left right navigation
+        .carousel-control {
+            background-image: none;
+            z-index: 100;
+            height: 10%;
+            width: auto;
+            top: 45%;
+            bottom: 45%; 
+            .fa {
+                font-size: @font-size-h1;
+                display: inline-block;
+            }
+          &.left {
+            left: 10px;
+            .fa {
+                left: 0px;
+            }
+
+          }
+          &.right {
+            right: 10px;
+            .fa {
+                right: 0px;
+            }
+          }
+          @media (max-width: @screen-xs-max) {
+//            display: none;
+          }
+        }
+    }
+}
+
+.image-on-bg {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    .gradient-overlay {
+        .lh-background-image(linear-gradient(to bottom, fade(@gray-base, 70%) 0%,fade(@gray-base, 0%) 100%));
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 5;
+        width: 100%;
+    }
+
+    .carousel-caption {
+        .flex-vertical-align();
+        width: 100%;
+        height: 100%;
+        padding: @grid-gutter-width @dinamyc-margin;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 10;
+        text-align: left;
+        font-size: (@font-size-base * 2);
+        line-height: (@font-size-base * 3.94);
+
+        @media (max-width: @screen-md-max) {
+            font-size: (@font-size-base * 3.94);
+            line-height: (@font-size-base * 3.94);
+            bottom: 180px;
+        }
+
+        @media (max-width: @screen-sm-max) {
+            font-size: (@font-size-base * 3.94);
+            line-height: (@font-size-base * 3.94);
+            bottom: 80px;
+        }
+
+        @media (max-width: @screen-xs-max) {
+            font-size: (@font-size-base * 2.24);
+            line-height: (@font-size-base * 2.24);
+            bottom: 104px;
+        }
+       @media (min-width: @screen-sm-min) and (max-width: @screen-lg-min) {
+            font-size: (@font-size-base * 2.1875);
+            line-height: (@font-size-base * 2.1875);
+       }
+        .caption-constrain {
+            .container-fluid;
+            width: 100%;
+            @media (max-width: @screen-xs) {
+                padding-left: @grid-gutter-width;
+                padding-right: @grid-gutter-width;
+                a {
+                    > span {
+                        padding-top: (@grid-gutter-width / 5);
+                        padding-bottom: (@grid-gutter-width / 5); 
+                        display: block;    
+                    }
+                    .testimonial {
+                        font-size: (@font-size-base * 1);
+                        line-height: (@font-size-base * 1);
+                    }
+                    .title.heading {
+                        font-size: (@font-size-base * 1.875);
+                        line-height: (@font-size-base * 1.875);
+                    }
+                    .title.subheading {
+                        font-size: (@font-size-base * 1.375);
+                        line-height: (@font-size-base * 1.375);
+                    }
+                    .author {
+                        font-size: (@font-size-base * 0.75);
+                        line-height: (@font-size-base * 0.75);
+                    }
+                    span {
+                        .inversecolor {
+                            padding-top: (@grid-gutter-width / 5);
+                            adding-bottom: (@grid-gutter-width / 5);
+                            font-size: (@font-size-base * 1.4);
+                            line-height: (@font-size-base * 1.4);
+                            display: block; 
+                        }
+                    }
+                }
+            }
+            
+            .title {
+                display: block;
+                //line-height: 74px;
+                &.heading {
+                    .roboto-thin;
+                    color: @brand-light;
+                    .inversecolor {
+                        color: @brand-primary;
+                    }
+
+                }
+                &.subheading {
+                    .roboto-thin;
+                    color: @brand-primary;
+                }
+                &.subtitle {
+                    font-size: @font-size-h2;
+                    line-height: (@font-size-h2 * 1.4);
+                    margin-top: (@grid-gutter-width /4);
+                }
+            }
+            a:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    .testimonial {
+        .roboto-light;
+        font-size: (@font-size-base * 1.25);
+        line-height: (@font-size-base * 1.7);
+        color: @brand-light;
+        padding-top: (@grid-gutter-width /2);
+        //padding-left: 5px;
+        @media (max-width: @screen-md-max) {
+            font-size: (@font-size-base * 1.25);
+            line-height: (@font-size-base * 1.7);
+        }
+
+        @media (max-width: @screen-sm-max) {
+            font-size: (@font-size-base * 1.11);
+            line-height: (@font-size-base * 1.5);
+        }
+        .italicized {
+            font-style: italic;
+        }
+        .author {
+            .roboto-light;
+            color: @brand-primary;
+        }
+        .title {
+            padding-top: (@grid-gutter-width /2);
+            padding-bottom: (@grid-gutter-width /2);
+        }
+        ul {
+            padding-left: 20px;
+            li {
+                padding-bottom: 5px;
+            }
+
+        }
+    }
+}
+
+
+// fade actions
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            .lh-opacity(0);
+            transition-property: opacity;
+        }
+        .active {
+            .lh-opacity(1);
+         }
+        .active.left,
+        .active.right {
+            .lh-opacity(0);
+            left: 0;
+            z-index: 1;
+        }
+        .next.left,
+        .prev.right {
+            .lh-opacity(1);
+        }
+    }
+    .carousel-control {
+
+    }
+}
+
+// chevron for careers slider
+.page-node-42 {
+    .carousel-container {
+        position: relative;
+        .arrow-scroll {
+            cursor: pointer;
+            font-size: (@font-size-h1 *2);
+            color: fade(@brand-light, 70%);
+            position: absolute;
+            bottom: (@grid-gutter-width *3);
+            left: 50%;
+            z-index: 6000;
+            &:hover {
+                color: fade(@brand-light, 40%);
+            }
+        }
+        .carousel-indicators {
+            display: none;
+        }
+    }
+}
+

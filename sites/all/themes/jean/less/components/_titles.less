@@ -1,0 +1,56 @@
+/*****************************************************************************************
+*
+*	name: titles.less
+*   path: components/_titles.less
+*	version: 1.0.0
+*	description: titles classes
+*	author: Cristian Voinea
+*	e-mail: cvoinea@tremend.ro
+*	url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+// Page title
+.field--name-title-field {
+    .page-title;
+    margin-bottom: (@grid-gutter-width /1);
+  @media (min-width: @screen-sm-min) and (max-width: @screen-lg-min) {
+    font-size: (@font-size-base * 2.4375);
+    line-height: (@font-size-base * 2.4375);
+  }
+}
+
+.field--name-field-subtitle {
+    .page-subtitle;
+    margin-bottom: (@grid-gutter-width /2);
+  @media (min-width: @screen-sm-min) and (max-width: @screen-lg-min) {
+    font-size: (@font-size-base * 1.75);
+    line-height: (@font-size-base * 2);
+  }
+}
+
+
+// Taxonomy page title
+.term-listing-heading {
+    .taxonomy-term--tags {
+        .taxonomy-term__content {
+            .field--name-name-field {
+                .field__items {
+                    .field__item {
+                        .page-title;
+
+                    }
+                }
+            }
+            .field--name-description-field {
+                margin-bottom: (@grid-gutter-width * 2);
+                .field__items {
+                    .field__item {
+                        .job-listing;
+                        .job-subtitle;
+                    }
+                }
+            }
+        }
+    }
+}

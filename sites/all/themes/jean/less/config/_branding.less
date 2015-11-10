@@ -1,0 +1,300 @@
+/*****************************************************************************************
+*
+*    name: branding.less
+*	 path: config/_branding.less
+*    version: 1.0.0
+*    description: include branding definitions (styles, colors, font sizes)
+*    author: Cristian Voinea
+*    e-mail: cvoinea@tremend.ro
+*    url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+@dinamyc-margin:                      4%;
+@testimonial-bg:                      #f5f8f9;
+
+
+
+
+body {
+    font-size: @font-size-base;
+
+}
+
+//temporary tweak
+.branding-element {
+    margin-bottom: @grid-gutter-width;
+    padding: (@grid-gutter-width /2);
+    &.branding-dark {
+        background-color: @gray-dark;
+    }
+    &.branding-light {
+        border: 1px dotted @gray-light;
+    }
+}
+
+
+// content titles
+.page-title {
+    .roboto-light;
+    font-size: (@font-size-base * 3.63);
+    line-height: (@font-size-base * 3.65);
+    color: @gray-dark;
+    @media (max-width: @screen-md-min) {
+        font-size: (@font-size-base * 2.13);
+        line-height: (@font-size-base * 2.15);
+    }
+    @media (max-width: @screen-sm-min) {
+        font-size: (@font-size-base * 1.83);
+        line-height: (@font-size-base * 1.85);
+    }
+}
+
+.page-subtitle {
+    .roboto-regular;
+    font-size: (@font-size-base * 2.20);
+    letter-spacing: -2px;
+    color: fade(@gray-light, 50%);
+}
+
+.page-subsubtitle {
+    .roboto-regular;
+    font-size: (@font-size-base * 1.5);
+    color: @brand-primary;
+}
+
+// box content
+.box-title {
+    .roboto-light;
+    font-size: (@font-size-base * 1.2);
+    line-height: (@font-size-base * 1.7);
+    .label {
+        color: @gray-dark;
+    }
+    .title {
+        color: @brand-primary;
+    }
+}
+
+.box-desc {
+    .roboto-regular;
+    font-size: (@font-size-base * 0.92);
+    color: @gray-dark;
+}
+
+// testimonial
+.testimonial {
+    .roboto-regular;
+    font-size: (@font-size-base * 1.42);
+    &.testimonial-name {
+        color: @brand-primary;
+    }
+    &.testimonial-company {
+        color: @gray-light;
+    }
+}
+
+.testimonial-description {
+    .roboto-regular;
+    font-size: (@font-size-base * 1.20);
+    color: @brand-primary;
+}
+
+
+// certifications
+
+.certification-label {
+    .roboto-light;
+    font-size: (@font-size-base * 1.42);
+    padding-right: (@grid-gutter-width /2);
+    margin-right: (@grid-gutter-width /2);
+    position: relative;
+    &:after {
+        content: '';
+        font-family: 'FontAwesome';
+        color: @brand-primary;
+        position: absolute;
+        right: 0px;
+    }
+}
+
+// accordion content
+.accordion {
+    .accordion-label {
+        .roboto-regular;
+        font-size: (@font-size-base * 1.27);
+        color: @brand-primary;
+    }
+    .accordion-title {
+        .roboto-regular;
+        font-size: (@font-size-base * 1.44);
+        color: @gray-dark;
+    }
+    .accordion-excerpt {
+        .roboto-light;
+        font-size: (@font-size-base * 1.27);
+        color: @gray-light;
+    }
+
+    .accordion-more-link {
+        .roboto-light;
+        font-size: (@font-size-base * 1.27);
+        color: @brand-primary;
+    }
+}
+
+// job listing
+.job-listing {
+    .job-id {
+        .roboto-light;
+        font-size: (@font-size-base * 3.66);
+        color: @brand-primary;
+    }
+    .job-title {
+        .roboto-medium;
+        font-size: (@font-size-base * 1.44);
+        line-height: (@font-size-base * 1.44);
+        color: @brand-primary;
+    }
+    .job-subtitle {
+        .roboto-light;
+        font-size: (@font-size-base * 1.16);
+        color: @gray-dark;
+    }
+    .job-option {
+        font-size: (@font-size-base * 1.16);
+        color: @gray-dark;
+        .job-location {
+            .roboto-light;
+            color: @gray-dark;
+        }
+        .job-apply-link {
+            .roboto-medium;
+            color: @brand-primary;
+        }
+    }
+}
+
+.contact-info {
+    .roboto-light;
+    font-size: 18px;
+}
+
+// job page
+
+.job-btn {
+    background: @button-bg;
+    color: @brand-light;
+    padding: (@grid-gutter-width /3);
+    margin-bottom: (@grid-gutter-width /3);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+// landing page
+.landing-button {
+    line-height: (@grid-gutter-width + (@grid-gutter-width / 6));
+    color: @brand-light;
+    text-align: center;
+}
+
+//Blog section
+
+.blog-listing-title {
+    .roboto-thin;
+    font-size: 24px;
+    @media (max-width: @screen-sm) {
+        font-size: 15px;
+    }
+}
+
+.field--name-title-field {
+    color: rgb(0, 99, 123);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    height: 57px;
+    line-height: 57.6px;
+    margin-bottom: 52.8px;
+    margin-top: 0px;
+    text-align: left;
+}
+.field--name-title-field, .field--name-post-date, .field--name-author {
+  padding-left: 70px;
+}
+
+.field--name-post-date, .field--name-author {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.field--name-author {
+    padding-bottom: -3px;
+    margin-bottom: -3px;
+}
+
+.field--name-field-image {
+    position:relative;
+    float:left;
+    overflow:hidden;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100% !important;
+    height: auto !important;
+    padding-top: -5px;
+    &:after {
+        content: '';
+        position:absolute;
+        top:0px;
+        left:0px;
+        padding-top: -5px;
+        border-right:40px solid transparent;
+        border-bottom:40px solid transparent;
+        border-top:10px solid white;
+        border-left:250px solid white;
+    }
+}
+
+.field--name-body {
+    color: rgb(127, 127, 127);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 20px 80px;
+}
+
+.field--name-field-content {
+    color: rgb(127, 127, 127);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 20px 80px ;
+}
+.field--name-field-subtitle {
+    color: rgb(0, 99, 122);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    height: 28px;
+    line-height: 28.8px;
+    text-align: left;
+    margin: 20px 80px ;
+}
+
+.field--name-field-quotes {
+    color: rgb(160, 160, 164);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    border-left: 2px solid #ccc;
+    margin: 20px 80px ;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+}

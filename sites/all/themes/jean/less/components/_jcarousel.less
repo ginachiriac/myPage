@@ -1,0 +1,226 @@
+/*****************************************************************************************
+*
+*	name: jcarousel.less
+*   path: components/_jcarousel.less
+*	version: 1.0.0
+*	description: jCarousel styling
+*	author: Cristian Voinea
+*	e-mail: cvoinea@tremend.ro
+*	url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+
+.view-romania-places,
+.view-team-jcarousel {
+	background-color: darken(@gray-dark, 10%);
+	.jcarousel-container-horizontal {
+		width: 100%;
+		height: auto;
+		margin: auto;
+	}
+	.jcarousel-clip-horizontal {
+		width: 100%;
+		overflow: hidden;
+	}
+	.jcarousel-item {
+		padding: 0;
+		width: 100px;
+		overflow: hidden;
+		list-style: none;
+        .group-place,
+		.group-team-member {
+			position: relative;
+			.field--type-image {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.group-name {
+			    display: none;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				padding: 0px 0px @grid-gutter-width @grid-gutter-width;
+				width: 100%;
+				.field--name-title-field {
+					font-size: @font-size-h3;
+					margin: 0px;
+				}
+				.field--name-field-subtitle {
+
+				}
+			}
+		}
+	}
+	.jcarousel-item-horizontal {
+		//margin: 0 4px;
+	}
+	.jcarousel-item-placeholder {
+
+	}
+
+	/**
+	* Buttons
+	*/
+	.jcarousel-next,
+	.jcarousel-prev {
+		position: absolute;
+		top: 50%;
+		margin-top: -((@font-size-h1 *2) /2);
+		display: block;
+		width: (@grid-gutter-width *2);
+		height: (@grid-gutter-width *2);
+	}
+	.jcarousel-next-disabled,
+	.jcarousel-prev-disabled {
+		display: none;
+	}
+
+	/**
+	* Horizontal Buttons
+	*/
+	.jcarousel-prev-horizontal {
+		left: @grid-gutter-width;
+		&:after {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			content: '';
+			font-family: 'FontAwesome';
+			color: fade(@brand-light, 70%);
+			font-size: (@font-size-h1 *2);
+			line-height: (@font-size-h1 *2);
+		}
+
+		&:hover {
+
+		}
+		:active {
+
+		}
+	}
+
+	.jcarousel-next-horizontal {
+		right: @grid-gutter-width;
+		&:after {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			content: '';
+			font-family: 'FontAwesome';
+			color: fade(@brand-light, 70%);
+			font-size: (@font-size-h1 *2);
+			line-height: (@font-size-h1 *2);
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+
+	.jcarousel-navigation {
+		display: none;
+	}
+}
+
+
+//title and diagonal for the block
+.block--views-romania-places-places-block {
+    margin-top: 210px;
+    .places-title {
+        top: -285px!important;
+    }
+}
+
+
+.block--views-romania-places-places-block,
+.block--views-team-jcarousel-meet-the-team {
+	padding-top: 240px;
+	position: relative;
+	overflow: hidden;
+	.block__title {
+		display: none;
+	}
+	.block__content {
+		padding-top: @grid-gutter-width;
+	}
+	.view-footer {
+        .place-diagonal,
+		.team-diagonal {
+		    content: '';
+		    position: absolute;
+		    left: 0px;
+		    top: 0px;
+		    z-index: 1000;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-top-style: inset;
+		    border-width: 0 0 280px (@screen-lg * 2);
+		    border-color: transparent transparent darken(@gray-dark, 10%) transparent;
+			background-color: @body-bg;
+		}
+	}
+	.view-header {
+		.container;
+		position: relative;
+		height: (@grid-gutter-width /2);
+        @media (max-width: @screen-sm-min) {
+
+        }
+        .places-title,
+		.meet-the-team-title {
+			.page-subtitle;
+			position: absolute;
+			left: 0px;
+			top: -180px;
+			z-index: 1001;
+            @media (max-width: @screen-sm-min) {
+                padding-left: @grid-gutter-width;
+            }
+		}
+		.meet-the-team-subtitle {
+	        .certification-label;
+			color: @brand-light;
+			text-align: right;
+			position: absolute;
+			right: 0px;
+			top: -80px;
+			z-index: 1001;
+			&:after {
+				display: none;
+			}
+            @media (max-width: @screen-sm-min) {
+                color: @gray-dark;
+                top: -140px;
+                left: 0px;
+                text-align: left;
+                padding-left: @grid-gutter-width;
+            }
+		}
+	}
+}
+
+// override for the carriers page
+.page-node-42 {
+    .block--views-romania-places-places-block,
+    .block--views-team-jcarousel-meet-the-team {
+        background-color: @brand-light!important;
+        .view-header {
+            height: 0px;
+        }
+    	.view-footer {
+            .place-diagonal,
+    		.team-diagonal {
+                display: none;
+    		}
+        }
+        .meet-the-team-subtitle {
+            color: @gray-dark;
+        }
+    }
+}

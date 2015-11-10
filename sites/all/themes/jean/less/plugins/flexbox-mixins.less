@@ -1,0 +1,19 @@
+/*****************************************************************************************
+*
+*	name: flexbox-mixins.less
+*	path: plugins/_flexbox-mixins.less
+*	version: 1.0.0
+*	description: custom flexbox mixins based on flexbox plugin
+*	author: Cristian Voinea
+*	e-mail: cvoinea@tremend.ro
+*	url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+.flex-vertical-align (@direction: column, @valign: center, @justify: center) {
+    .flex-display();
+    .flex-direction(@direction);
+    .align-items(@valign);
+    .justify-content(@justify);
+    display: flex;
+}

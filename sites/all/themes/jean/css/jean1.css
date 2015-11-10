@@ -1,0 +1,220 @@
+
+.single_page {
+    height: 100%;
+}
+
+
+/* section: Home */
+
+#main {
+    background-color: #faf8ff;
+
+}
+
+.navigation {
+    text-align: center;
+}
+
+
+#main-menu-links li {
+    margin-right: 15px;
+    float: none;
+    display: inline-block;
+    text-align: center;
+
+}
+
+#main-menu-links li a {
+    width: 85px;
+    margin: 0px;
+    text-align: center;
+    font-family: tahoma, verdana, arial, sans-serif;
+    font-weight: bolder;
+    border-radius: 3px;
+    height: 25px;
+    font-size: 12px;
+}
+
+.pane-content {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.brand strong {
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    font-size: 35px;
+}
+
+/* section: About */
+
+img {
+    align-content: center;
+    }
+.pane-content img {
+    border-radius: 48px;
+    margin-top: 15px;
+    margin-left: 75px;
+}
+
+/*section: Background*/
+
+.home-section {
+    display: block;
+    position: relative;
+    z-index: 120;
+}
+
+.job {
+    border: 1px solid #FFCC00;
+    margin-bottom: 30px;
+    margin-right: 100px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.education {
+    border: 1px solid #FFCC00;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 3px;
+    padding-right: 80px;
+}
+
+.course {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 0.9em;
+    color: #606777;
+}
+
+.date {
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.content-title {
+    margin-top: 20px;   
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.position {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 0.9em;
+    color: #606777;
+}
+
+.location {
+    font-size: 9px;
+    float: right;
+    font-weight: bolder;
+}
+
+.yellow {
+    color: #E6B800;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.date {
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.skills {
+    margin: 0px 0px 85px 30px;
+}
+
+.progress {
+    overflow: hidden;
+    height: 18px;
+    margin-bottom: 26px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    transition: width .6s ease;
+}
+
+.progress-bar-success {
+    background-color: #5cb85c;
+}
+
+.progress-bar-info {
+    background-color: #5bc0de;
+}
+
+.progress-bar-warning {
+    background-color: #f0ad4e;
+}
+
+.progress-bar-danger {
+    background-color: #d9534f;
+}
+
+
+
+/* section: contact me */
+
+.panels-flexible-5  {
+    margin-top: 200px;
+}
+
+.row {
+    margin-left: -55px;
+    margin-right: -55px;
+}
+
+form {
+    background: #f9f9f9;
+    padding: 90px;
+    border-radius: 6px;
+    margin: 55px 120px 15px 120px;
+}
+
+
+
+.input.form-text {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: none;
+}
+
+.contact-form .resizable-textarea .grippie {
+    width: 100%;
+
+}
+
+form#contact-form .form-group label {
+    text-align: left !important;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+input.form-submit, a.button {
+    width: 100%;
+    border-radius: 5px;
+}
+

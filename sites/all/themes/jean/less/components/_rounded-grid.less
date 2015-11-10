@@ -1,0 +1,169 @@
+/*****************************************************************************************
+*
+*	name: rounded-grid.less
+*   path: components/_rounded-grid.less
+*	version: 1.0.0
+*	description: services listing
+*	author: Cristian Voinea
+*	e-mail: cvoinea@tremend.ro
+*	url: http://www.tremend.ro
+*
+*****************************************************************************************/
+
+@service-circle:            240px;
+@technology-circle:         160px;
+
+
+// services
+.block--views-service-listing-service-listing {
+    .block__content {
+        margin: @grid-gutter-width 0px;
+        .view-service-listing {
+            .view-content {
+                .make-row;
+                text-align: center;
+                .views-row {
+                    margin: (@grid-gutter-width /4);
+                    width: @service-circle;
+                    height: @service-circle;
+                    color: @brand-light;
+                    float: none;
+                    display: inline-block;
+                    position: relative;
+                    .views-field {
+                        width: 100%;
+                        top: 0px;
+                        bottom: 0px;
+                        position: absolute;
+                        &.views-field-title-field {
+                            .field-content {
+                                position: absolute;
+                                top: 0px;
+                                bottom: 0px;
+                                width: 100%;
+                                a {
+                                    .lh-transition-duration(.2);
+                                    .flex-vertical-align ();
+                                    .lh-border-radius(@service-circle);
+                                    .box-title;
+                                    line-height: 22.6px;
+                                    padding: (@grid-gutter-width /4);
+                                    color: @brand-light;
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 0px;
+                                    bottom: 0px;
+                                    left: 0px;
+                                    z-index: 10;
+                                    background-color: @brand-primary;
+                                    &:hover {
+                                        text-decoration: none;
+                                        background-color: @gray-light;
+                                    }
+                                }
+                            }
+                        }
+                        &.views-field-field-cta-item {
+                            .field-content {
+                                a {
+                                    .lh-transition-duration(.2);
+                                    position: absolute;
+                                    bottom: (@grid-gutter-width);
+                                    left: 0px;
+                                    right: 0px;
+                                    z-index: 11;
+                                    color: @brand-light;
+                                    font-size: (@font-size-base /1.3);
+                                    text-align: center;
+                                    display: block;
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// technologies
+.field--name-field-technologies {
+    margin: @grid-gutter-width 0px;
+    .field__items {
+        .make-row;
+        text-align: left;
+        @media (max-width: @screen-md-min) {
+            text-align: center;
+        }
+        .field__item {
+            margin: (@grid-gutter-width /4);
+            width: @technology-circle;
+            height: @technology-circle;
+            color: @brand-light;
+            float: none;
+            display: inline-block;
+            position: relative;
+            .node--technology--teaser {
+                .node__content {
+                    .field {
+                        width: 100%;
+                        top: 0px;
+                        bottom: 0px;
+                        position: absolute;
+                        &.field--name-title-field {
+                            .field__items {
+                                .field__item {
+                                    a, div {
+                                        .lh-transition-duration(.2);
+                                        .flex-vertical-align ();
+                                        .lh-border-radius(@technology-circle);
+                                        .box-title;
+                                        text-align: center;
+                                        padding: (@grid-gutter-width /4);
+                                        color: @brand-light;
+                                        position: absolute;
+                                        width: 100%;
+                                        top: 0px;
+                                        bottom: 0px;
+                                        left: 0px;
+                                        z-index: 10;
+                                        background-color: @brand-primary;
+                                        &:hover {
+                                            text-decoration: none;
+                                            background-color: @gray-light;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.field--name-field-cta-item {
+                            .field__items {
+                                .field__item {
+                                    a {
+                                        position: absolute;
+                                        bottom: (@grid-gutter-width /1.5);
+                                        left: 0px;
+                                        right: 0px;
+                                        z-index: 11;
+                                        color: @brand-light;
+                                        font-size: (@font-size-base /1.3);
+                                        text-align: center;
+                                        display: block;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
