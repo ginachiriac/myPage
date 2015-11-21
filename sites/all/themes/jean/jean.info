@@ -6,6 +6,7 @@ stylesheets[all][] = css/jean.css
 stylesheets[all][] = css/colors.css
 
 scripts[] = js/main.js
+scripts[] = js/collapsible-menu.js
 
 regions[header] = Header
 regions[help] = Help

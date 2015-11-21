@@ -1,0 +1,4 @@
+<?php
+function customize_js_alter(&$javascript) {
+    unset($javascript['sites/all/modules/single_page_website/js/responsive_bartik.js']);
+}

@@ -1,0 +1,5 @@
+core = "7.x"
+description = "An example module used to learn module development and forms creation."
+name = "Customize"
+
+files[] = customize.module
