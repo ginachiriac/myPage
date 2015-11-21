@@ -7842,6 +7842,10 @@ button.close {
   border-bottom: 1px solid #eee;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+#page-wrapper {
+  background-color: #ffffff;
 }
 .pane-content .title {
   font-weight: bolder;
@@ -7883,11 +7887,19 @@ button.close {
   width: 100%;
   background-color: transparent;
 }
+a#menu-toggle {
+  text-align: right;
+  padding: 0.7em 10px 0.7em 0;
+  background-color: #ffffff;
+}
+a#menu-toggle:after {
+  background: none;
+}
 div #content .section {
   padding: 0;
 }
 div #content .section #spw-panel1 {
-  background-image: url("cool.jpg");
+  background: url("cool.jpg") center;
   -webkit-background-size: cover;
           background-size: cover;
   position: relative;
