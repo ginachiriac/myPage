@@ -5,12 +5,6 @@
   right: 0;
 }
 
-.single_page_wrapper {
-  min-height: 600px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 #header {
   position: absolute;
   left: 0;
@@ -27,6 +21,24 @@
 
 #page-wrapper {
   background-color: #ffffff;
+}
+
+.single_page_wrapper {
+  min-height: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media(min-width: @screen-sm-min) {
+  .single_page_wrapper {
+    padding: 50px;
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .single_page_wrapper {
+    padding: 30px 5px;
+  }
 }
 
 .pane-content .title {
@@ -130,9 +142,6 @@ div {
   color: #ffffff;
   border-color: #E68A8A;
   background-color: #FF9999;
-}
-
-.ukie-icons {
   display: inline-block;
   font-size: 20px;
   width: 36px;
@@ -153,9 +162,6 @@ div {
 }
 
 // Section: About Me
-#spw-panel2 {
-  padding: 50px;
-}
 
 .pane-content {
   font-family: 'Varela Round', sans-serif;
@@ -199,7 +205,6 @@ div {
 
 // Section: Background
 #spw-panel4 {
-  padding: 40px;
   .home-section {
     display: block;
     position: relative;
@@ -218,7 +223,7 @@ div {
 }
 
 .job {
-  border: 1px solid #E68A8A;
+  border: 3px outset #E68A8A;
   margin-bottom: 25px;
   padding: 10px;
   border-radius: 3px;
@@ -244,7 +249,7 @@ div {
 
 @media(min-width: @screen-lg-min) {
   .education {
-    border: 1px solid #E68A8A;
+    border: 3px outset #E68A8A;
     margin: 10px 40px;
     padding: 15px;
     border-radius: 3px;
@@ -259,7 +264,7 @@ div {
 
 @media(max-width: @screen-md-max) {
   .education {
-    border: 1px solid #E68A8A;
+    border: 3px outset #E68A8A;
     padding: 15px;
     border-radius: 3px;
     .course {
@@ -303,10 +308,6 @@ div {
 }
 
 // Section: Contact Me
-#spw-contacts {
-  padding: 40px;
-}
-
 .center {
   text-align: center;
   margin-top: 5px;
